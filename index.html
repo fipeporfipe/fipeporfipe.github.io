@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/vuejs.3.2.37.prod.js"></script>
+    <script src="https://www.tabelafipebrasil.com/api/js/tabelafipe-widget.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9289897309652492"
+     crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+      integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Fipe por Fipe Web</title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>{{ appTitle }}</h3>
+      <p>Veículo A</p>
+      <div id="veiculoA" class="tfb-query" data-style="1"></div>
+      
+      <!-- banner FPF Web -->
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-9289897309652492"
+        data-ad-slot="6569207733"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
+      <p>Veículo B</p>
+      <div id="veiculoB" class="tfb-query" data-style="1"></div>
+      <div class="tfb-stylebase">
+        <button @click="compareVehicles()">Comparar Veículos</button>
+        <br />
+        <br />
+        <p v-if="comparedValue">Diferença de valor: {{ comparedValue }}</p>
+        <br />
+        <canvas class="chart" width="400" height="400" id="fipeChart"></canvas>
+      </div>
+    </div>
+    <script src="js/fipeporfipe.js"></script>
+  </body>
+</html>

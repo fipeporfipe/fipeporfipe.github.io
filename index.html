@@ -30,6 +30,36 @@
       <div class="row">
         <h3>{{ appTitle }}</h3>
       </div>
+
+      <div class="row">
+        <div class="card">
+          <p>
+            O aplicativo Fipe por Fipe foi desenvolvido para quem quer pesquisar
+            os valores de veículos da tabela Fipe e fazer comparações entre
+            esses valores.
+            <br />
+            <br />
+            O processamento do aplicativo gera dois resultados:
+            <br />
+            - O valor da diferença entre os preços dos veículos (maior - menor)
+            <br />
+            - Um gráfico com os valores para melhor visualização
+            <br />
+            <br />
+            O comparativo é um diferencial exclusivo do app Fipe por Fipe, que
+            foi feito pensando nos negociadores de veículos novos e usados, onde
+            é comum ouvir a expressão "Fipe por Fipe", quando os valores da
+            tabela oficial da Fipe serão considerados numa negociação de
+            veículos.
+            <br />
+            <br />
+            O aplicativo utiliza a API de terceiro do site TabelaFipeBrasil, o
+            que garante os preços atualizados em tempo real com a última tabela
+            disponível no site oficial.
+          </p>
+        </div>
+      </div>
+
       <div class="row">
         <div id="veiculoA" class="tfb-query card blue" data-style="1"></div>
       </div>
@@ -52,17 +82,24 @@
       <div class="row">
         <div id="veiculoB" class="tfb-query card red" data-style="1"></div>
       </div>
+
       <div class="row">
         <button @click="compareVehicles()">Comparar Veículos</button>
       </div>
+
       <div class="row" v-if="comparedValue">
         <p>Diferença de valor: {{ comparedValue }}</p>
       </div>
+
       <div class="row">
         <canvas class="chart" width="400" height="400" id="fipeChart"></canvas>
       </div>
+
       <div class="row">
-        <a href="https://play.google.com/store/apps/details?id=br.com.alloy.android.fipeporfipe" target="_blank">
+        <a
+          href="https://play.google.com/store/apps/details?id=br.com.alloy.android.fipeporfipe"
+          target="_blank"
+        >
           <img src="img/google-play-badge.png" alt="Android App" />
         </a>
       </div>

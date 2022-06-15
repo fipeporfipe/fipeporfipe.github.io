@@ -41,6 +41,7 @@ h3,
 p {
   /* color: white; */
   font-weight: bold;
+  text-align: justify;
 }
 
 .tfb-style1 {

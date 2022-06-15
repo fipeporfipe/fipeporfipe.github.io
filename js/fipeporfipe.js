@@ -13,7 +13,7 @@ Vue.createApp({
       });
       //validate if any is empty
       if (values.find((v) => v === "") == "") {
-        alert("Selecione os dois veículos (A e B) para fazer a comparação.");
+        alert("Selecione os dois veículos para fazer a comparação.");
         return;
       }
       this.compareValues(values);

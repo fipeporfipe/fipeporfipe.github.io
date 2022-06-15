@@ -1,6 +1,40 @@
 body {
   font-family: Open Sans;
   /* background-color: lightsteelblue; */
+  background-color: #fafafa;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+  padding: 30px;
+  margin: 20px;
+  width: 400px;
+  transition: all 0.3s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+ 
+.card p {
+  color: #a3a5ae;
+  font-size: 16px;
+}
+
+.blue {
+  border-left: 3px solid #4895ff;
+}
+
+.red {
+  border-left: 3px solid #b3404a;
 }
 
 h3,
@@ -10,7 +44,8 @@ p {
 }
 
 .tfb-style1 {
-  border: solid 2px #8e8fbd !important;
+  border: none !important;
+  background-color: #fafafa !important;
 }
 
 button {

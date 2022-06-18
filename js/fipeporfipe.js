@@ -47,7 +47,7 @@ Vue.createApp({
           {
             label: "Comparativo de valores",
             data: [val1, val2],
-            backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)"],
+            backgroundColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)"],
             hoverOffset: 4,
           },
         ],

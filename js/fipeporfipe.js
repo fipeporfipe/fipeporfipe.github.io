@@ -5,6 +5,24 @@ Vue.createApp({
       comparedValue: undefined
     };
   },
+  mounted() {
+    const myTimeout = setTimeout(function () {
+      let comboA = document.querySelector(
+        "#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
+      );
+      let comboB = document.querySelector(
+        "#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
+      );
+
+      comboA.oninput = () => {
+        console.log(comboB);
+      };
+
+      comboB.oninput = () => {
+        console.log(comboB.selectedOptions[0].value);
+      };
+    }, 3000);
+  },
   methods: {
     compareVehicles() {
       let values = []; //clear the array
@@ -47,7 +65,7 @@ Vue.createApp({
           {
             label: "Comparativo de valores",
             data: [val1, val2],
-            backgroundColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)"],
+            backgroundColor: ["#4895FF", "#B3404A"],
             hoverOffset: 4,
           },
         ],

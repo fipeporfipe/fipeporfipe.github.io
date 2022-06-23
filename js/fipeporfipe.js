@@ -2,6 +2,7 @@ Vue.createApp({
   data() {
     return {
       appTitle: "Fipe por Fipe Web App!",
+      appVersion: "1.0",
       comparedValue: undefined
     };
   },

@@ -8,20 +8,16 @@ Vue.createApp({
   },
   mounted() {
     const myTimeout = setTimeout(function () {
-      let comboA = document.querySelector(
-        "#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
-      );
-      let comboB = document.querySelector(
-        "#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
-      );
+      let comboA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");
+      // let comboB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");
 
       comboA.oninput = () => {
-        console.log(comboB);
+        console.log(comboA.selectedOptions[0].value);
       };
 
-      comboB.oninput = () => {
-        console.log(comboB.selectedOptions[0].value);
-      };
+      // comboB.oninput = () => {
+      //   console.log(comboB.selectedOptions[0].value);
+      // };
     }, 3000);
   },
   methods: {

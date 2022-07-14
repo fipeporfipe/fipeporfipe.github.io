@@ -6,7 +6,7 @@ export default {
   },
   data() {
     return {
-      appVersion: "1.0",
+      appVersion: "1.1",
       comparedValue: undefined,
     };
   },

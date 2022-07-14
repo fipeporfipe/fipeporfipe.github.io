@@ -1,4 +1,4 @@
-import {Chart} from "chart.js";
+import Chart from 'chart.js/auto';
 
 export default {
   props: {
@@ -74,8 +74,8 @@ export default {
             data: [val1, val2],
             backgroundColor: ["#4895FF", "#B3404A"],
             hoverOffset: 4,
-          },
-        ],
+          }
+        ]
       };
 
       let chartStatus = Chart.getChart("fipeChart");
@@ -83,7 +83,7 @@ export default {
         chartStatus.destroy();
       }
       // eslint-disable-next-line no-unused-vars
-      const chart = new Chart(ctx, {
+      const fipeChart = new Chart(ctx, {
         type: "doughnut",
         data: data,
         options: {
@@ -95,9 +95,9 @@ export default {
           },
           layout: {
             padding: 20,
-          },
-        },
+          }
+        }
       });
-    },
-  },
+    }
+  }
 };

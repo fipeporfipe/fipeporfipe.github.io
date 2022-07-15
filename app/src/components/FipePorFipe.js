@@ -1,3 +1,4 @@
+import Util from '@/util/Util';
 import Chart from 'chart.js/auto';
 
 export default {
@@ -7,7 +8,7 @@ export default {
   data() {
     return {
       appVersion: "1.1",
-      comparedValue: undefined,
+      comparedValue: undefined
     };
   },
   mounted() {
@@ -41,8 +42,8 @@ export default {
     },
     compareValues(values) {
       //compare values
-      let valueA = this.getMoney(values[0]);
-      let valueB = this.getMoney(values[1]);
+      let valueA = Util.getMoney(values[0]);
+      let valueB = Util.getMoney(values[1]);
       let diffValue = Math.max(valueA, valueB) - Math.min(valueA, valueB);
       this.comparedValue = diffValue.toLocaleString("pt-br", {
         style: "currency",
@@ -50,10 +51,7 @@ export default {
       });
       console.log(`Diferença de valores: ${this.comparedValue}`);
       this.generateChart(valueA, valueB);
-    },
-    getMoney(value) {
-      return parseInt(value.replace(/[\D]+/g, "")) / 100;
-    },
+    },    
     generateChart(val1, val2) {
       let labelA = document.querySelector(
         "#veiculoA > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel"

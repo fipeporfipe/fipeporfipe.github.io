@@ -60,8 +60,14 @@ export default {
         "#veiculoB > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel"
       ).selectedOptions[0].innerText;
       if (labelA == labelB) {
-        labelA += " (A)";
-        labelB += " (B)";
+        let anoA = document.querySelector(
+          "#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
+        ).selectedOptions[0].innerText;
+        let anoB = document.querySelector(
+          "#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
+        ).selectedOptions[0].innerText;
+        labelA += ` (${anoA})`;
+        labelB += ` (${anoB})`;
       }
       const ctx = document.getElementById("fipeChart").getContext("2d");
       const data = {

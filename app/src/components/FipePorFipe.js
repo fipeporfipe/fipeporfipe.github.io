@@ -13,9 +13,7 @@ export default {
   },
   mounted() {
     setTimeout(function () {
-      let comboA = document.querySelector(
-        "#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
-      );
+      let comboA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");
       // let comboB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");
 
       comboA.oninput = () => {
@@ -53,19 +51,11 @@ export default {
       this.generateChart(valueA, valueB);
     },    
     generateChart(val1, val2) {
-      let labelA = document.querySelector(
-        "#veiculoA > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel"
-      ).selectedOptions[0].innerText;
-      let labelB = document.querySelector(
-        "#veiculoB > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel"
-      ).selectedOptions[0].innerText;
+      let labelA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel").selectedOptions[0].innerText;
+      let labelB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel").selectedOptions[0].innerText;
       if (labelA == labelB) {
-        let anoA = document.querySelector(
-          "#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
-        ).selectedOptions[0].innerText;
-        let anoB = document.querySelector(
-          "#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel"
-        ).selectedOptions[0].innerText;
+        let anoA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel").selectedOptions[0].innerText;
+        let anoB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel").selectedOptions[0].innerText;
         labelA += ` (${anoA})`;
         labelB += ` (${anoB})`;
       }

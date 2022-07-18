@@ -19,7 +19,7 @@ export default {
       comboA.oninput = () => {
         console.log(comboA.selectedOptions[0].value);
       };
-
+      
       // comboB.oninput = () => {
       //   console.log(comboB.selectedOptions[0].value);
       // };
@@ -40,15 +40,17 @@ export default {
     },
     compareValues(values) {
       //compare values
-      let valueA = Util.getMoney(values[0]);
-      let valueB = Util.getMoney(values[1]);
-      let diffValue = Math.max(valueA, valueB) - Math.min(valueA, valueB);
+      let val = {
+        a: Util.getMoney(values[0]),
+        b: Util.getMoney(values[1])
+      }
+      let diffValue = Math.max(val.a, val.b) - Math.min(val.a, val.b);
       this.comparedValue = diffValue.toLocaleString("pt-br", {
         style: "currency",
         currency: "BRL",
       });
       console.log(`Diferença de valores: ${this.comparedValue}`);
-      this.generateChart(valueA, valueB);
+      this.generateChart(val.a, val.b);
     },    
     generateChart(val1, val2) {
       let labelA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel").selectedOptions[0].innerText;

@@ -1,14 +1,22 @@
+import AppDescription from './AppDescription.vue'
+import SelecaoVeiculo from './SelecaoVeiculo.vue'
 import Util from '@/util/Util';
 import Chart from 'chart.js/auto';
 
 export default {
+  components: {
+    AppDescription,
+    SelecaoVeiculo
+  },
   props: {
     app: String,
   },
   data() {
     return {
       appVersion: "1.1",
-      comparedValue: undefined
+      comparedValue: undefined,
+      nome: '',
+      maxlength: 60
     };
   },
   mounted() {

@@ -4,6 +4,8 @@
             <h3>{{ app }}</h3>
         </div>
 
+        <!-- <DataTable paging="true"/> -->
+
         <AppDescription />
 
         <SelecaoVeiculo veiculo="veiculoA" card="tfb-query card blue" />

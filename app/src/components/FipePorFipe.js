@@ -1,12 +1,16 @@
 import AppDescription from './AppDescription.vue'
 import SelecaoVeiculo from './SelecaoVeiculo.vue'
+
+import DataTable from './DataTable.vue'
+
 import Util from '@/util/Util';
 import Chart from 'chart.js/auto';
 
 export default {
   components: {
     AppDescription,
-    SelecaoVeiculo
+    SelecaoVeiculo,
+    DataTable
   },
   props: {
     app: String,
@@ -61,17 +65,19 @@ export default {
       this.generateChart(val.a, val.b);
     },    
     generateChart(val1, val2) {
-      let labelA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel").selectedOptions[0].innerText;
-      let labelB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel").selectedOptions[0].innerText;
-      if (labelA == labelB) {
-        let anoA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel").selectedOptions[0].innerText;
-        let anoB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel").selectedOptions[0].innerText;
-        labelA += ` (${anoA})`;
-        labelB += ` (${anoB})`;
+      let label = {
+        a: document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel").selectedOptions[0].innerText,
+        b: document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-modelo > select.tfb-sel").selectedOptions[0].innerText
+      };
+      if (label.a == label.b) {
+        label.anoA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel").selectedOptions[0].innerText;
+        label.anoB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel").selectedOptions[0].innerText;
+        label.a += ` (${ label.anoA })`;
+        label.b += ` (${ label.anoB })`;
       }
       const ctx = document.getElementById("fipeChart").getContext("2d");
       const data = {
-        labels: [labelA, labelB],
+        labels: [label.a, label.b],
         datasets: [
           {
             label: "Comparativo de valores",

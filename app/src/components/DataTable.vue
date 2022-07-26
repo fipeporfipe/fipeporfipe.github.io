@@ -40,7 +40,7 @@ export default {
             page: 1,
             pageSize: 2,
             pageCount: undefined,
-            headers: ["ID","NOME","NASCIMENTO","PRATELEIRA","CAIXA","SELECIONADO","CÓDIGO"],
+            headers: ["ID", "NOME", "NASCIMENTO", "PRATELEIRA", "CAIXA", "SELECIONADO", "CÓDIGO"],
             datasource: [
                 {
                     id: 1,

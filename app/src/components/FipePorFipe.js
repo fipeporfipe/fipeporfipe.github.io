@@ -6,6 +6,8 @@ import DataTable from './DataTable.vue'
 import Util from '@/util/Util';
 import Chart from 'chart.js/auto';
 
+import api from '@/api/fipeapi';
+
 export default {
   components: {
     AppDescription,
@@ -24,6 +26,7 @@ export default {
     };
   },
   mounted() {
+    api.ConsultarTabelaDeReferencia();
     setTimeout(function () {
       let comboA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");
       // let comboB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");

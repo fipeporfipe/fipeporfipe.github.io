@@ -2,16 +2,16 @@ import axios from "axios";
 
 const URL_TABELA_REFERENCIA = 'https://veiculos.fipe.org.br/api/veiculos/ConsultarTabelaDeReferencia';
 
-function getBodyFormData(tabela) {
-  let formData = new FormData();
-  formData.append('userName', tabela);
-  return formData;
-}
+// function getBodyFormData(tabela) {
+//   let formData = new FormData();
+//   formData.append('userName', tabela);
+//   return formData;
+// }
 
-function getConsultarMarcasFormData(tabela, tipoVeiculo) {
-  var formData = getBodyFormData(tabela);
-  bodyFormData.append('userName', 'Fred');
-}
+// function getConsultarMarcasFormData(tabela, tipoVeiculo) {
+//   var formData = getBodyFormData(tabela);
+//   bodyFormData.append('userName', 'Fred');
+// }
 
 export default {
 

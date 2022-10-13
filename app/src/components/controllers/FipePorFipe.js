@@ -1,10 +1,10 @@
-import AppDescription from './AppDescription.vue'
-import SelecaoVeiculo from './SelecaoVeiculo.vue'
+import AppDescription from './views/AppDescription.vue'
+import SelecaoVeiculo from './views/SelecaoVeiculo.vue'
 
-import DataTable from './DataTable.vue'
+import DataTable from './views/DataTable.vue'
 
-import Util from '@/util/Util';
-import Chart from 'chart.js/auto';
+import Util from '@/util/Util'
+import Chart from 'chart.js/auto'
 
 //import api from '@/api/fipeapi';
 
@@ -21,7 +21,7 @@ export default {
     return {
       appVersion: "1.1",
       comparedValue: undefined,
-      nome: '',
+      codigo: undefined,
       maxlength: 60
     };
   },
@@ -41,6 +41,12 @@ export default {
     }, 5000);
   },
   methods: {
+    enterCode() {
+      console.log(this.codigo);
+      setTimeout(() => {
+        this.codigo = "";
+      }, 2000)
+    },
     compareVehicles() {
       let values = []; //clear the array
       document.querySelectorAll(".tfb-price").forEach((p) => {

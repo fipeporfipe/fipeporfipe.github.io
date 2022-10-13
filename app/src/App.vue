@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import FipePorFipe from './components/FipePorFipe.vue'
+import FipePorFipe from './components/views/FipePorFipe.vue'
 
 export default {
   name: 'App',

@@ -6,6 +6,10 @@
 
         <!-- <DataTable paging="true"/> -->
 
+        <!-- <div class="row">
+            <input type="text" id="qrcode" v-model="codigo" @keyup.enter="enterCode" placeholder="QR Code / Código de Barras" />
+        </div> -->
+
         <AppDescription />
 
         <SelecaoVeiculo veiculo="veiculoA" card="tfb-query card blue" />
@@ -41,7 +45,7 @@
     </div>
 </template>
 
-<script src="./FipePorFipe.js" />
+<script src="../controllers/FipePorFipe.js" />
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

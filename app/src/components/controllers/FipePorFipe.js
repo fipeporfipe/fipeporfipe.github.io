@@ -1,7 +1,7 @@
-import AppDescription from './views/AppDescription.vue'
-import SelecaoVeiculo from './views/SelecaoVeiculo.vue'
+import AppDescription from '../views/AppDescription.vue'
+import SelecaoVeiculo from '../views/SelecaoVeiculo.vue'
 
-import DataTable from './views/DataTable.vue'
+import DataTable from '../views/DataTable.vue'
 
 import Util from '@/util/Util'
 import Chart from 'chart.js/auto'

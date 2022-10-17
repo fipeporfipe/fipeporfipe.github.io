@@ -1,0 +1,104 @@
+body {
+    font-family: Open Sans;
+    /* background-color: lightsteelblue; */
+    background-color: #fafafa;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    margin: 20px;
+    /* width: 400px; */
+    transition: all 0.3s ease-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+   
+  .card p {
+    color: #a3a5ae;
+    font-size: 16px;
+  }
+  
+  .blue {
+    border-left: 3px solid #4895ff;
+  }
+  
+  .red {
+    border-left: 3px solid #b3404a;
+  }
+  
+  h3,
+  p {
+    /* color: white; */
+    font-weight: bold;
+    text-align: justify;
+  }
+  
+  .tfb-style1 {
+    border: none !important;
+    background-color: #fafafa !important;
+  }
+  
+  button {
+    align-items: center;
+    appearance: none;
+    background-color: #3EB2FD;
+    background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: Open Sans, sans-serif;
+    font-size: 1rem;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s, background-position .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  
+  button:active,
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover {
+    background-position: -20px -20px;
+  }
+  
+  button:focus:not(:active) {
+    box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+  }
+  
+  .chart {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    min-width: 160px;
+    min-height: 250px;
+    text-align: center;
+    position: relative;
+    vertical-align: top
+  }

@@ -3,8 +3,12 @@ import SelecaoVeiculo from './SelecaoVeiculo'
 import { useState } from "react";
 import Util from '../util/Util'
 import Chart from 'chart.js/auto'
+import ChartCanvas from './Chart'
+import GooglePlayBadge from './GooglePlayBadge'
+import AppTitle from './AppTitle'
 
 function mounted() {
+    console.log('Executou o mounted')
     setTimeout(function () {
         let comboA = document.querySelector("#veiculoA > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");
         // let comboB = document.querySelector("#veiculoB > div > div.tfb-div-sel.tfb-div-ano > select.tfb-sel");
@@ -103,9 +107,7 @@ function FipePorFipe(props) {
 
     return (
         <div>
-        <div className="row">
-            <h3>{props.app}</h3>
-        </div>
+          <AppTitle app={props.app} />
 
         {/* <DataTable paging="true"/> */}
 
@@ -134,15 +136,10 @@ function FipePorFipe(props) {
             </div>
         }
 
-        <div className="row">
-            <canvas className="chart" width="400" height="400" id="fipeChart"></canvas>
-        </div>
+        <ChartCanvas />
 
-        <div className="row">
-            <a href="https://play.google.com/store/apps/details?id=br.com.alloy.android.fipeporfipe" target="_blank" rel="noreferrer">
-                <img src="./assets/google-play-badge.png" alt="Android App" />
-            </a>
-        </div>
+        <GooglePlayBadge />
+        
         <div className="row">
             <p>Versão do app: {appVersion}</p>
         </div>

@@ -1,8 +1,6 @@
 <template>
     <div>
-        <div class="row">
-            <h3>{{ app }}</h3>
-        </div>
+        <AppTitle app="Fipe por Fipe Web App" />
 
         <!-- <DataTable paging="true"/> -->
 
@@ -30,15 +28,10 @@
             <p>Diferença de valor: {{ comparedValue }}</p>
         </div>
 
-        <div class="row">
-            <canvas class="chart" width="400" height="400" id="fipeChart"></canvas>
-        </div>
+        <ChartCanvas />
 
-        <div class="row">
-            <a href="https://play.google.com/store/apps/details?id=br.com.alloy.android.fipeporfipe" target="_blank">
-                <img src="../../assets/google-play-badge.png" alt="Android App" />
-            </a>
-        </div>
+        <GooglePlayBadge />
+
         <div class="row">
             <p>Versão do app: {{ appVersion }}</p>
         </div>

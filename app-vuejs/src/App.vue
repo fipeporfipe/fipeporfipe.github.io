@@ -1,5 +1,5 @@
 <template>
-  <FipePorFipe app="Fipe por Fipe Web App"/>
+  <FipePorFipe />
 </template>
 
 <script>

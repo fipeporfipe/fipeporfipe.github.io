@@ -1,5 +1,8 @@
+import AppTitle from '../views/AppTitle.vue'
 import AppDescription from '../views/AppDescription.vue'
 import SelecaoVeiculo from '../views/SelecaoVeiculo.vue'
+import ChartCanvas from '../views/ChartCanvas.vue'
+import GooglePlayBadge from '../views/GooglePlayBadge.vue'
 
 import DataTable from '../views/DataTable.vue'
 
@@ -10,12 +13,12 @@ import Chart from 'chart.js/auto'
 
 export default {
   components: {
+    AppTitle,
     AppDescription,
     SelecaoVeiculo,
+    ChartCanvas,
+    GooglePlayBadge,
     DataTable
-  },
-  props: {
-    app: String,
   },
   data() {
     return {
